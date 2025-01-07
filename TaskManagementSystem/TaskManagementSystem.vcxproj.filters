@@ -27,9 +27,21 @@
     <ClCompile Include="TaskStates.cpp">
       <Filter>Source Files\TaskStates</Filter>
     </ClCompile>
+    <ClCompile Include="TaskContext.cpp">
+      <Filter>Source Files\TaskStates</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskObserver.cpp">
+      <Filter>Source Files\TaskStates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TaskStates.h">
+      <Filter>Header Files\TaskStates</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskContext.h">
+      <Filter>Header Files\TaskStates</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskObserver.h">
       <Filter>Header Files\TaskStates</Filter>
     </ClInclude>
   </ItemGroup>

@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TaskContext.cpp" />
     <ClCompile Include="TaskManagementSystem.cpp" />
+    <ClCompile Include="TaskObserver.cpp" />
     <ClCompile Include="TaskStates.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TaskObserver.h" />
+    <ClInclude Include="TaskContext.h" />
     <ClInclude Include="TaskStates.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
