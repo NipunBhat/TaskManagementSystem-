@@ -13,10 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\TaskStates">
+      <UniqueIdentifier>{05a8d2cc-b4d0-4756-a885-9670b69526cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TaskStates">
+      <UniqueIdentifier>{f1129739-9c73-4403-9511-dc52d80cbebd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TaskManagementSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TaskStates.cpp">
+      <Filter>Source Files\TaskStates</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TaskStates.h">
+      <Filter>Header Files\TaskStates</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
