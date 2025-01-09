@@ -1,11 +1,11 @@
 #include "TaskStates.h"
 
 // Create State
-void CCreateState::Handle()
+void CCreateState::Handle(CTaskContext& p_taskContext)
 {
 	std::string message = "Task has been Created ...";
 	std::cout << message << std::endl;
-	//Notify observers
+	p_taskContext.Notify(message);
 }
 
 std::string CCreateState::GetCurrentState()
@@ -14,11 +14,11 @@ std::string CCreateState::GetCurrentState()
 }
 
 // InProgress State
-void CInProgressState::Handle()
+void CInProgressState::Handle(CTaskContext& p_taskContext)
 {
 	std::string message = "Task is InProgress ...";
 	std::cout << message << std::endl;
-	//Notify observers
+	p_taskContext.Notify(message);
 }
 
 std::string CInProgressState::GetCurrentState()
@@ -27,11 +27,11 @@ std::string CInProgressState::GetCurrentState()
 }
 
 // Completed State
-void CCompletedState::Handle()
+void CCompletedState::Handle(CTaskContext& p_taskContext)
 {
 	std::string message = "Task is completed ...";
 	std::cout << message << std::endl;
-	//Notify 
+	p_taskContext.Notify(message);
 }
 
 std::string CCompletedState::GetCurrentState()

@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include "TaskContext.h"
+
+class CTaskContext;
 
 enum ETaskState
 {
@@ -14,11 +17,10 @@ public:
 	ITaskState() = default;
 	virtual ~ITaskState() = default;
 	
-	virtual void Handle() = 0;
+	virtual void Handle(CTaskContext &p_taskContext) = 0;
 	virtual std::string GetCurrentState() = 0;
 
 protected:
-	std::string sStateName;
 };
 
 class CCreateState : public ITaskState
@@ -27,7 +29,7 @@ public:
 	CCreateState() = default;
 	~CCreateState()= default;
 
-	void Handle();
+	void Handle(CTaskContext& p_taskContext) override;
 	std::string GetCurrentState();
 };
 
@@ -37,7 +39,7 @@ public:
 	CInProgressState() = default;
 	~CInProgressState() = default;
 
-	void Handle();
+	void Handle(CTaskContext& p_taskContext) override;
 	std::string GetCurrentState();
 };
 
@@ -47,6 +49,6 @@ public:
 	CCompletedState() = default;
 	~CCompletedState() = default;
 
-	void Handle();
+	void Handle(CTaskContext& p_taskContext);
 	std::string GetCurrentState();
 };
